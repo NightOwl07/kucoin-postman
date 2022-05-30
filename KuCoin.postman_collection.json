@@ -1,0 +1,365 @@
+{
+	"info": {
+		"_postman_id": "d328d77f-273c-46de-baf4-e9bd910909a7",
+		"name": "KuCoin",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "User Info",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{apiUrl}}/api/v1/sub/user",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"sub",
+								"user"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Account",
+			"item": [
+				{
+					"name": "Create an Account",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"type\": \"main\", // Account type: main, trade, margin\r\n    \"currency\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiUrl}}/api/v1/accounts",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"accounts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List Accounts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{apiUrl}}/api/v1/accounts",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"accounts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get an Account",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{apiUrl}}/api/v1/accounts/{accountId}",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"accounts",
+								"{accountId}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Account Ledgers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{apiUrl}}/api/v1/accounts/ledgers",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"accounts",
+								"ledgers"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Order",
+			"item": [
+				{
+					"name": "List Orders",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{apiUrl}}/api/v1/orders",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Recent Orders",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{apiUrl}}/api/v1/limit/orders",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"limit",
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Order",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{apiUrl}}/api/v1/orders/{order-id}",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"orders",
+								"{order-id}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Fills",
+			"item": [
+				{
+					"name": "List Fills",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{apiUrl}}/api/v1/fills",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"fills"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Recent Fills",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{apiUrl}}/api/v1/limit/fills",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"limit",
+								"fills"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Symbols & Ticker",
+			"item": [
+				{
+					"name": "Get Symbols List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{apiUrl}}/api/v1/symbols",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"symbols"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Tickers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{apiUrl}}/api/v1/market/allTickers",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"market",
+								"allTickers"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"const timestamp = Date.now();",
+					"",
+					"const body = request.body ? request.body : '';",
+					"const method = request.method;",
+					"const [, endpoint] = request.url.split('{{apiUrl}}');",
+					"",
+					"const apiVersion = \"2\";",
+					"const apiKey = \"YOUR-API-KEY\";",
+					"const apiSecret = \"YOUR-API-SECRET\"",
+					"const apiPassphrase = \"YOUR-API-PASSPHRASE\";",
+					"const signature = timestamp + method + endpoint + body;",
+					"",
+					"const hashedSignature = CryptoJS.HmacSHA256(signature, apiSecret);",
+					"const hashedPassphrase = CryptoJS.HmacSHA256(apiPassphrase, apiSecret);",
+					"",
+					"pm.request.headers.add({",
+					"    key: 'KC-API-KEY',",
+					"    value: apiKey",
+					"});",
+					"",
+					"pm.request.headers.add({",
+					"    key: 'KC-API-SIGN',",
+					"    value: hashedSignature.toString(CryptoJS.enc.Base64)",
+					"});",
+					"",
+					"pm.request.headers.add({",
+					"    key: 'KC-API-TIMESTAMP',",
+					"    value: timestamp",
+					"});",
+					"",
+					"pm.request.headers.add({",
+					"    key: 'KC-API-PASSPHRASE',",
+					"    value: hashedPassphrase.toString(CryptoJS.enc.Base64)",
+					"});",
+					"",
+					"pm.request.headers.add({",
+					"    key: 'KC-API-KEY-VERSION',",
+					"    value: apiVersion",
+					"});"
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "apiUrl",
+			"value": "https://api.kucoin.com",
+			"type": "default"
+		}
+	]
+}
